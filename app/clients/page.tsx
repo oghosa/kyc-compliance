@@ -1,8 +1,7 @@
 'use client';
 
 import React from 'react'
-import Link from 'next/link'
-import { Bell, ChevronDown, FileText, Home, LogOut, PieChart, Settings, Shield, Users, Search, Plus, MoreHorizontal, ChevronLeft, ChevronRight } from 'lucide-react'
+import { Bell, ChevronDown, FileText, Home, PieChart, Settings, Shield, Users, Search, Plus, ChevronLeft, ChevronRight } from 'lucide-react'
 
 export default function ClientsView() {
   return (

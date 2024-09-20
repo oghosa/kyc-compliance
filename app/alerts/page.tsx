@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { Bell, ChevronDown, FileText, Home, PieChart, Settings, Shield, Users, AlertTriangle, CheckCircle, XCircle, Clock, Filter, ChevronLeft, ChevronRight } from 'lucide-react'
+import { Bell, ChevronDown, FileText, Home, PieChart, Settings, Shield, Users, AlertTriangle, CheckCircle, Clock, Filter, ChevronLeft, ChevronRight } from 'lucide-react'
 
 export default function AlertsView() {
   return (

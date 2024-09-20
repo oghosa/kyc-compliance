@@ -1,8 +1,7 @@
 'use client';
 
 import React from 'react'
-import Link from 'next/link'
-import { Bell, ChevronDown, FileText, Home, PieChart, Settings, Shield, Users, Lock, Mail, Globe, BellRing, UserPlus, Save } from 'lucide-react'
+import { Bell, ChevronDown, FileText, Home, PieChart, Settings, Shield, Users, Lock, Mail, Globe, UserPlus, Save } from 'lucide-react'
 
 export default function SettingsView() {
   return (

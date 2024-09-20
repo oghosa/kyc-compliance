@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react'
-import Link from 'next/link'
 import { Bell, ChevronDown, FileText, Home, PieChart, Settings, Shield, Users, Download, Calendar, BarChart, LineChart, DollarSign } from 'lucide-react'
 
 export default function ReportsView() {

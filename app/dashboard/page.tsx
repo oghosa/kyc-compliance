@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { Bell, ChevronDown, FileText, Home, LogOut, PieChart, Settings, Shield, Users } from 'lucide-react'
+import { Bell, ChevronDown, FileText, Home, PieChart, Settings, Shield, Users } from 'lucide-react'
 
 export default function KYCDashboard() {
   return (

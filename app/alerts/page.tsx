@@ -161,7 +161,12 @@ export default function AlertsView() {
   )
 }
 
-function SidebarLink({ href, icon, label, active = false }) {
+function SidebarLink({ href, icon, label, active = false }: {
+  href: string;
+  icon: React.ReactNode;
+  label: string;
+  active?: boolean;
+}) {
   return (
     <Link
       href={href}
@@ -175,7 +180,12 @@ function SidebarLink({ href, icon, label, active = false }) {
   )
 }
 
-function AlertSummaryCard({ title, value, icon, color }) {
+function AlertSummaryCard({ title, value, icon, color }: {
+  title: string;
+  value: string;
+  icon: React.ReactNode;
+  color: string;
+}) {
   return (
     <div className={`${color} overflow-hidden shadow rounded-lg`}>
       <div className="p-5">
@@ -197,7 +207,7 @@ function AlertSummaryCard({ title, value, icon, color }) {
   )
 }
 
-function getPriorityColor(priority) {
+function getPriorityColor(priority: string): string {
   switch (priority) {
     case 'High':
       return 'bg-red-600'

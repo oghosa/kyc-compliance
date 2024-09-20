@@ -207,7 +207,12 @@ export default function KYCMonitoringView() {
   )
 }
 
-function SidebarLink({ href, icon, label, active = false }) {
+function SidebarLink({ href, icon, label, active = false }: {
+  href: string;
+  icon: React.ReactNode;
+  label: string;
+  active?: boolean;
+}) {
   return (
     <Link
       href={href}
@@ -221,7 +226,7 @@ function SidebarLink({ href, icon, label, active = false }) {
   )
 }
 
-function SummaryCard({ title, value, icon }) {
+function SummaryCard({ title, value, icon }: { title: string; value: string; icon: React.ReactNode }) {
   return (
     <div className="bg-white overflow-hidden shadow rounded-lg">
       <div className="p-5">
@@ -243,7 +248,7 @@ function SummaryCard({ title, value, icon }) {
   )
 }
 
-function getRiskLevelColor(riskLevel) {
+function getRiskLevelColor(riskLevel: string): string {
   switch (riskLevel) {
     case 'Low':
       return 'bg-green-100 text-green-800'
@@ -256,7 +261,7 @@ function getRiskLevelColor(riskLevel) {
   }
 }
 
-function getKYCStatusColor(kycStatus) {
+function getKYCStatusColor(kycStatus: string): string {
   switch (kycStatus) {
     case 'Up to Date':
       return 'bg-green-100 text-green-800'

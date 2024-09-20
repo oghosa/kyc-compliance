@@ -184,7 +184,12 @@ export default function ClientsView() {
   )
 }
 
-function SidebarLink({ href, icon, label, active = false }) {
+function SidebarLink({ href, icon, label, active = false }: {
+  href: string;
+  icon: React.ReactNode;
+  label: string;
+  active?: boolean;
+}) {
   return (
     <a
       href={href}
@@ -198,7 +203,7 @@ function SidebarLink({ href, icon, label, active = false }) {
   )
 }
 
-function getRiskLevelColor(riskLevel) {
+function getRiskLevelColor(riskLevel: string): string {
   switch (riskLevel) {
     case 'Low':
       return 'bg-green-100 text-green-800'
@@ -211,7 +216,7 @@ function getRiskLevelColor(riskLevel) {
   }
 }
 
-function getKYCStatusColor(kycStatus) {
+function getKYCStatusColor(kycStatus: string): string {
   switch (kycStatus) {
     case 'Verified':
       return 'bg-green-100 text-green-800'

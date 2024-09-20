@@ -2,6 +2,28 @@
 
 import React from 'react'
 import { Bell, ChevronDown, FileText, Home, PieChart, Settings, Shield, Users, Lock, Mail, Globe, UserPlus, Save } from 'lucide-react'
+import Link from 'next/link'
+
+interface SidebarLinkProps {
+  href: string;
+  icon: React.ReactNode;
+  label: string;
+  active?: boolean;
+}
+
+function SidebarLink({ href, icon, label, active = false }: SidebarLinkProps) {
+  return (
+    <Link
+      href={href}
+      className={`flex items-center space-x-2 mb-4 px-4 py-2 rounded-lg transition-colors duration-200 ${
+        active ? 'bg-blue-700 text-white' : 'text-blue-100 hover:bg-blue-700 hover:text-white'
+      }`}
+    >
+      {icon}
+      <span>{label}</span>
+    </Link>
+  )
+}
 
 export default function SettingsView() {
   return (
@@ -156,21 +178,11 @@ export default function SettingsView() {
   )
 }
 
-function SidebarLink({ href, icon, label, active = false }) {
-  return (
-    <a
-      href={href}
-      className={`flex items-center space-x-2 mb-4 px-4 py-2 rounded-lg transition-colors duration-200 ${
-        active ? 'bg-blue-700 text-white' : 'text-blue-100 hover:bg-blue-700 hover:text-white'
-      }`}
-    >
-      {icon}
-      <span>{label}</span>
-    </a>
-  )
-}
-
-function SettingsNavItem({ icon, label, active = false }) {
+function SettingsNavItem({ icon, label, active = false }: {
+  icon: React.ReactNode;
+  label: string;
+  active?: boolean;
+}) {
   return (
     <a
       href="#"

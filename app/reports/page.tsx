@@ -145,7 +145,12 @@ export default function ReportsView() {
   )
 }
 
-function SidebarLink({ href, icon, label, active = false }) {
+function SidebarLink({ href, icon, label, active = false }: {
+  href: string;
+  icon: React.ReactNode;
+  label: string;
+  active?: boolean;
+}) {
   return (
     <a
       href={href}
@@ -159,7 +164,12 @@ function SidebarLink({ href, icon, label, active = false }) {
   )
 }
 
-function ReportSummaryCard({ title, value, change, icon }) {
+function ReportSummaryCard({ title, value, change, icon }: {
+  title: string;
+  value: string;
+  change: string;
+  icon: React.ReactNode;
+}) {
   const isPositive = change.startsWith('+')
   return (
     <div className="bg-white overflow-hidden shadow rounded-lg">
@@ -189,7 +199,7 @@ function ReportSummaryCard({ title, value, change, icon }) {
   )
 }
 
-function getReportIcon(type) {
+function getReportIcon(type: string) {
   switch (type) {
     case 'compliance':
       return <Shield className="h-6 w-6 text-blue-600" />

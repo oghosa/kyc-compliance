@@ -100,7 +100,12 @@ export default function KYCDashboard() {
   )
 }
 
-function SidebarLink({ href, icon, label, active = false }) {
+function SidebarLink({ href, icon, label, active = false }: {
+  href: string;
+  icon: React.ReactNode;
+  label: string;
+  active?: boolean;
+}) {
   return (
     <Link
       href={href}
@@ -114,7 +119,12 @@ function SidebarLink({ href, icon, label, active = false }) {
   )
 }
 
-function DashboardWidget({ title, value, description, color }) {
+function DashboardWidget({ title, value, description, color }: {
+  title: string;
+  value: string;
+  description: string;
+  color: string;
+}) {
   return (
     <div className="bg-white overflow-hidden shadow rounded-lg">
       <div className="p-5">
@@ -141,7 +151,7 @@ function DashboardWidget({ title, value, description, color }) {
   )
 }
 
-function Alert({ title, description }) {
+function Alert({ title, description }: { title: string; description: string }) {
   return (
     <div className="bg-red-50 border-l-4 border-red-400 p-4">
       <div className="flex">
